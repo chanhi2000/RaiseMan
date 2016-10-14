@@ -1,0 +1,7 @@
+# Macc OS X
+*.DS_Store
+
+# Xcode
+*.xcuserstate
+RaiseMan.xcodeproj/xcuserdata
+RaiseMan.xcodeproj/project.xcworkspace
