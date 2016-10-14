@@ -76,6 +76,9 @@
                                                     </connections>
                                                 </tableCellView>
                                             </prototypeCellViews>
+                                            <connections>
+                                                <binding destination="msS-fk-ghT" name="value" keyPath="arrangedObjects.name" id="K0T-35-LE1"/>
+                                            </connections>
                                         </tableColumn>
                                         <tableColumn width="334" minWidth="40" maxWidth="1000" id="AHL-rY-sOS">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Raise">
@@ -171,6 +174,23 @@ CA
                             <binding destination="msS-fk-ghT" name="enabled" keyPath="canRemove" id="jPh-So-xbr"/>
                         </connections>
                     </button>
+                    <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFZ-oa-CbE">
+                        <rect key="frame" x="340" y="216" width="136" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" usesSingleLineMode="YES" bezelStyle="round" id="ySA-jE-bCv">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </searchFieldCell>
+                        <connections>
+                            <binding destination="msS-fk-ghT" name="predicate" keyPath="filterPredicate" id="0sX-ol-fft">
+                                <dictionary key="options">
+                                    <string key="NSDisplayName">predicate</string>
+                                    <string key="NSPredicateFormat">self.name contains[cd] $value</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </searchField>
                 </subviews>
             </view>
             <connections>
